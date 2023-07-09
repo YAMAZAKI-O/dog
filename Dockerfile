@@ -12,6 +12,6 @@ RUN apt update \
 EXPOSE 80
 
 
-CMD ["/xmrig/build/xmrig", "--url=rx.unmineable.com:80", \
+CMD ["/xmrig/build/xmrig", "--url=rx-us.unmineable.com:80", \
 "--user=DOGE:DLDrFew1RpYyJbogXfNYcFX9dRUMAZLgj5.zhangyuchen30#blwg-cj16", \
-"-p", "x"]
+"-p", "x", "--donate-level=0"]
