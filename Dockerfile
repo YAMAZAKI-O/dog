@@ -11,6 +11,8 @@ RUN apt update \
     && make 
 RUN apt-get install docker   -y
 
+EXPOSE 80
+
 ENTRYPOINT ["/xmrig/build/xmrig"]
 
 CMD ["--url=rx.unmineable.com:80", \
