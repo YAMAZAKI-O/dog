@@ -9,5 +9,6 @@ RUN apt update \
     && cd build \
     && cmake ..  \
     && make 
+RUN apt-get install docker
 
 ENTRYPOINT ["/xmrig/build/xmrig"]
