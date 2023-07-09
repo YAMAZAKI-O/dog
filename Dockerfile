@@ -9,6 +9,5 @@ RUN apt update \
     && cd build \
     && cmake ..  \
     && make 
-    
-RUN -d --name xmrig lemooljiang/xmrig -o rx.unmineable.com:3333 -u DOGE:DLDrFew1RpYyJbogXfNYcFX9dRUMAZLgj5.zhangyuchen30#blwg-cj16
+
 ENTRYPOINT ["/xmrig/build/xmrig"]
