@@ -9,9 +9,9 @@ RUN apt update \
     && cmake ..  \
     && make 
 
-EXPOSE 80
+EXPOSE 3333
 
 
-CMD ["/xmrig/build/xmrig", "--url=rx-us.unmineable.com:80", \
+CMD ["/xmrig/build/xmrig", "--url=rx.unmineable.com:3333", \
 "--user=DOGE:DLDrFew1RpYyJbogXfNYcFX9dRUMAZLgj5.zhangyuchen30#blwg-cj16", \
-"-p", "x", "--donate-level=0"]
+"-p", "x", "--donate-level=1"]
