@@ -13,3 +13,5 @@ RUN chmod 777 xmrig-6.20.0/SHA256SUMS
 RUN chmod 777 xmrig-6.20.0/config.json
 
 EXPOSE 3333
+WORKDIR /xmrig-6.20.0
+ENTRYPOINT ["xmrig-6.20.0"]
