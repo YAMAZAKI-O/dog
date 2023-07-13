@@ -1,7 +1,7 @@
 FROM alpine:latest
 
-RUN apt update \
-    && apt install -y git build-essential cmake libuv1-dev libmicrohttpd-dev libssl-dev libhwloc-dev \
+RUN apk update \
+    && apk add -y git build-essential cmake libuv1-dev libmicrohttpd-dev libssl-dev libhwloc-dev \
     && git clone https://github.com/xmrig/xmrig.git \
     && cd xmrig \
     && mkdir build \
