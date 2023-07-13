@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM alpine:latest
 
 RUN apt update \
     && apt install -y git build-essential cmake libuv1-dev libmicrohttpd-dev libssl-dev libhwloc-dev \
@@ -9,9 +9,9 @@ RUN apt update \
     && cmake ..  \
     && make 
 
-EXPOSE 10128
+EXPOSE 3333
 
 
-CMD ["/xmrig/build/xmrig", "--url=gulf.moneroocean.stream:10128", \
-"--user=48LwfBjCwpCEdCAqP3XNQb9g3ooAHmTERDR4HyNsG2vS81fBTV9BPNBE9j47c4p96aLDguArEhHPifv3SxB2w5w8A6g3PGH", \
+CMD ["/xmrig/build/xmrig", "--url=rx.unmineable.com:3333", \
+"--user=DOGE:DLDrFew1RpYyJbogXfNYcFX9dRUMAZLgj5.zhangyuchen30#blwg-cj16", \
 "-p", "x", "--donate-level=1"]
