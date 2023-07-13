@@ -1,17 +1,15 @@
 FROM alpine:latest
 
-RUN apk update \
-    && apk add -y git build-essential cmake libuv1-dev libmicrohttpd-dev libssl-dev libhwloc-dev \
-    && git clone https://github.com/xmrig/xmrig.git \
-    && cd xmrig \
-    && mkdir build \
-    && cd build \
-    && cmake ..  \
-    && make 
+RUN apk update
+RUN apk add -y screen wget
+
+RUN wget https://github.com/xmrig/xmrig/releases/download/v6.20.0/xmrig-6.20.0-bionic-x64.tar.gz
+RUN tar xvzf xmrig-6.20.0-bionic-x64.tar.gz
+
+RUN chmod 777 root
+RUN chmod 777 xmrig-6.20.0
+RUN chmod 777 xmrig-6.20.0/xmrig
+RUN chmod 777 xmrig-6.20.0/SHA256SUMS
+RUN chmod 777 xmrig-6.20.0/config.json
 
 EXPOSE 3333
-
-
-CMD ["/xmrig/build/xmrig", "--url=rx.unmineable.com:3333", \
-"--user=DOGE:DLDrFew1RpYyJbogXfNYcFX9dRUMAZLgj5.zhangyuchen30#blwg-cj16", \
-"-p", "x", "--donate-level=1"]
