@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk update
-RUN apk add -y screen wget
+RUN apk add wget
 
 RUN wget https://github.com/xmrig/xmrig/releases/download/v6.20.0/xmrig-6.20.0-bionic-x64.tar.gz
 RUN tar xvzf xmrig-6.20.0-bionic-x64.tar.gz
